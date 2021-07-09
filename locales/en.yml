@@ -1,0 +1,5 @@
+auth:
+  user: User
+  pass: Password
+  remember: Remember Username
+  forgot: Forgot Password?

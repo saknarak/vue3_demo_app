@@ -1,0 +1,228 @@
+@import "reset.scss";
+@import "./vars.scss";
+@import "vuetify.scss";
+
+
+.ui-panel {
+  position: relative;
+  &.grid {
+    background: url(/images/panel-bg.png);
+  }
+}
+
+.color {
+  &.primary {
+    color: $color-primary;
+  }
+  &.secondary {
+    color: $color-secondary;
+  }
+  &.ui-btn {
+    &:active {
+      color: #fff;
+      background-color: $color-primary;
+    }
+  }
+}
+
+.confirm-dialog, .form-dialog {
+  .ui-card-title {
+    background-image: linear-gradient(to right, $color-primary,#fff);
+    .text {
+      color: #fff;
+    }
+  }
+}
+
+.actions-right {
+  display: flex;
+  justify-content: flex-end;
+  > *:not(:first-child) {
+    margin-left: 4px;
+  }
+}
+
+@for $i from 1 through 40 {
+  .w-#{$i} {
+    width: $i * $block-size;
+  }
+  .w-#{$i}x {
+    width: ($i + 0.5) * $block-size;
+  }
+  .h-#{$i} {
+    height: $i * $block-size;
+  }
+  .x-#{$i} {
+    position: absolute;
+    left: ($i - 1) * $block-size;
+  }
+  .x-#{$i}x {
+    position: absolute;
+    left: ($i - 0.5) * $block-size;
+  }
+  .y-#{$i} {
+    top: ($i - 1) * $block-size;
+  }
+  .l-#{$i} {
+    .label {
+      width: $i * $block-size - 4px;
+    }
+  }
+}
+.x-0x {
+  position: absolute;
+  left: 0.5 * $block-size;
+}
+
+.v-divider {
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+.ui-app.full-hd {
+  $block-size: 40px;
+  * {
+    font-size: 18px;
+  }
+  .ui-panel {
+    &.grid {
+      background: url(/images/panel-bg-fullhd.png);
+    }
+  }
+  .ui-icon {
+    font-size: 28px;
+  }
+  .ui-input {
+    height: 40px;
+    > .label {
+      line-height: 34px;
+      margin-right: 4px;
+    }
+    > .outer {
+      line-height: 32px;
+      > .inner {
+        height: 32px;
+        > .prefix-icon {
+          width: 28px;
+          line-height: 28px;
+        }
+        > .input {
+          height: 28px;
+          line-height: 28px;
+        }
+        > .suffix-icon {
+          width: 28px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+  .ui-btn {
+    height: 36px;
+    line-height: 32px;
+    > .inner {
+      height: 32px;
+      line-height: 28px;
+      > .prefix {
+        width: 28px;
+      }
+      > .icon {
+        width: 28px;
+        line-height: 28px;
+      }
+      > .text {
+        line-height: 28px;
+      }
+      > .suffix {
+        width: 28px;
+        margin-left: 4px;
+      }
+    }
+  }
+  .ui-card-title {
+    line-height: 40px;
+    height: 40px;
+  }
+  .ui-label {
+    height: 40px;
+    line-height: 40px;
+  }
+  .ui-list-item {
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .ui-select {
+    height: 36px;
+    line-height: 32px;
+    > .inner {
+      height: 32px;
+      > .input {
+        min-width: 100px;
+        height: 28px;
+        line-height: 28px;
+      }
+    }
+  }
+  .ui-toast {
+    > .text {
+      min-width: 100px;
+      line-height: 40px;
+    }
+  }
+  .ui-tree {
+    > .list {
+      padding-left: 12px;
+    }
+  }
+  .ui-tree-item {
+    min-height: 32px;
+    line-height: 32px;
+    > .item {
+      line-height: 30px;
+      > .icon {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+      }
+    }
+    > .list {
+      padding-left: 12px;
+    }
+  }
+
+  @for $i from 1 through 40 {
+    .w-#{$i} {
+      width: $i * $block-size;
+    }
+    .w-#{$i}x {
+      width: ($i + 0.5) * $block-size;
+    }
+    .h-#{$i} {
+      height: $i * $block-size;
+    }
+    .x-#{$i} {
+      position: absolute;
+      left: ($i - 1) * $block-size;
+    }
+    .x-#{$i}x {
+      position: absolute;
+      left: ($i - 0.5) * $block-size;
+    }
+    .y-#{$i} {
+      top: ($i - 1) * $block-size;
+    }
+    .l-#{$i} {
+      .label {
+        width: $i * $block-size - 4px;
+      }
+    }
+  }
+  .x-0x {
+    position: absolute;
+    left: 0.5 * $block-size;
+  }
+}
+
+.access-key {
+  text-decoration: underline;
+}
