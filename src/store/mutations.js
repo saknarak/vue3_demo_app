@@ -11,10 +11,11 @@ export default {
   toggleNav(state) {
     state.nav = !state.nav
   },
-  setLang(state, newLang) {
-    state.lang = newLang
+  async setLang(state, lang) {
+    // state.nav = false
+    state.lang = lang
   },
   setProductList(state, list) {
     state.productList = list
-  }
+  },
 }

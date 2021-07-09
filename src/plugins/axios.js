@@ -13,8 +13,8 @@ const defaultAxios = axios.create({
 
 export const install = ({ app, store }) => {
   console.log('axios install')
-  app.config.globalProperties.$axios = axios
-  app.config.globalProperties.$http = axios
+  app.config.globalProperties.$axios = defaultAxios
+  app.config.globalProperties.$http = defaultAxios
 
   defaultAxios.interceptors.response.use(response => {
     if (response.data?.session === null) {

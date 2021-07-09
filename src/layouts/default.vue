@@ -1,4 +1,13 @@
 <template>
+  <!-- <div>
+    <header>HEADER</header>
+    <nav>MENU</nav>
+    <main>
+      <router-view />
+    </main>
+    <footer>FOOTER</footer>
+  </div> -->
+
   <app-layout class="celims-app">
     <router-view />
   </app-layout>

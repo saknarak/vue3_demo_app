@@ -6,7 +6,7 @@ import actions from './actions'
 import ui from './ui'
 
 export default {
-  strict: true,
+  strict: false,
   state,
   mutations,
   getters,

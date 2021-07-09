@@ -1,6 +1,4 @@
-export default () => {
-  return {
-    nav: true,
-    lang: 'th',
-  }
-}
+export default () => ({
+  nav: true,
+  lang: 'th',
+})
