@@ -14,10 +14,10 @@ export default {
   ],
   yearFormatDefault: 'be',
   mqtt: {
-    url: 'ws://10.0.2.226:8083/mqtt',
+    url: 'ws://13.67.73.166:8083/mqtt',
     options: {
-      username: 'celims-ui',
-      password: 'celims!@1234',
+      username: 'demo',
+      password: '123456',
     },
   },
 }

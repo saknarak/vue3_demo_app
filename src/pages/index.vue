@@ -1,15 +1,17 @@
 <template>
-  <div class="my-card">
-    <div class="header">
-      TITLE
-    </div>
-    <div class="content">
-      CONTENT
-    </div>
-    <div class="actions">
-      ACTIONS
-    </div>
-  </div>
+  <my-card>
+    <h1>Hello2</h1>
+    <template #row="{ item }">
+      id={{ item.id }} name={{ item.name }} <ui-btn>OK</ui-btn>
+    </template>
+  </my-card>
+  <my-card>
+    <template #row="{ item }">
+      name={{ item.name }} id={{ item.id }}
+    </template>
+  </my-card>
+  <my-card />
+  <my-card />
 
   <!-- <h1>Loading... Pleas wait ({{ $store.getters.langName }})</h1>
   <ui-btn>test</ui-btn>
