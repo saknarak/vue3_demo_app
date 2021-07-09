@@ -1,6 +1,11 @@
 <template>
   <my-card>
     <h1>Hello2</h1>
+    <textarea v-model="text" />
+    <button @click="sendText">
+      SEND
+    </button>
+
     <template #row="{ item }">
       id={{ item.id }} name={{ item.name }} <ui-btn>OK</ui-btn>
     </template>
@@ -25,15 +30,29 @@
 </template>
 
 <script>
-export default {
-  setup() {
+import mqtt from '../lib/mqtt'
 
+export default {
+  data() {
+    return {
+      text: '',
+      list: [],
+    }
   },
 
-  beforeCreate() {
-    // this.$router.push('/auth')
-    // this.$router.replace('/auth')
-    // this.$router.go(-1)
+  mounted() {
+    mqtt.$on('demo/text', (topic, payload) => {
+      console.log(topic, payload)
+    })
+  },
+  beforeUnmount() {
+    mqtt.$off('demo/text')
+  },
+
+  methods: {
+    sendText() {
+      mqtt.$emit('demo/text', JSON.stringify({ text: this.text }))
+    },
   },
 }
 </script>
