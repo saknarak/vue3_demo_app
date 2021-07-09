@@ -1,5 +1,17 @@
 <template>
-  <h1>Loading... Pleas wait ({{ $store.getters.langName }})</h1>
+  <div class="my-card">
+    <div class="header">
+      TITLE
+    </div>
+    <div class="content">
+      CONTENT
+    </div>
+    <div class="actions">
+      ACTIONS
+    </div>
+  </div>
+
+  <!-- <h1>Loading... Pleas wait ({{ $store.getters.langName }})</h1>
   <ui-btn>test</ui-btn>
   <div>
     {{ $store.getters['ui/menusWithAcl'] }}
@@ -7,7 +19,7 @@
 
   <router-link to="/" active-class="active">
     Index
-  </router-link>
+  </router-link> -->
 </template>
 
 <script>
